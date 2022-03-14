@@ -15,7 +15,7 @@ const contactInfo = [
   },
   {
     text: "email",
-    link: "mailto:dbm@dbmace.dev"
+    link: "mailto:dbmace@protonmail.com"
   }
 ]
 

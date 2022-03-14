@@ -37,7 +37,7 @@ const awardInfo = [
     projectTitle: "Galena Country Tourism",
     url: null,
     association: "Madden Media",
-    description: "Development of a content hub to contribute to Galena Coutny's tourism marketing campaign",
+    description: "Development of a content hub to contribute to Galena County's tourism marketing campaign",
     awards: [
       {
         category: "Platinum Hermes Awards: Integrated Marketing Campaign",
