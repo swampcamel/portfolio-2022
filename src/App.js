@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.scss'
+import BorderBox from './components/BorderBox'
+import AnimatedCursor from 'react-animated-cursor'
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BorderBox />
+      <AnimatedCursor
+        innerSize={15}
+        outerSize={11}
+        color='52, 64, 59'
+      />
     </div>
   );
 }
 
-export default App;
+export default App

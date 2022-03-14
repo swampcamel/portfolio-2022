@@ -1,0 +1,361 @@
+@use "sass:map";
+@import './_colors.scss';
+@import './_typography.scss';
+
+.App {
+  background-color: map.get($light-theme, "primary");
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.borderBox {
+  width: 100%;
+  flex: 1;
+  border: 2px solid map.get($light-theme, "fourth");
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+}
+
+.Header {
+  position: relative;
+  z-index: 1;
+  margin: 24px 48px;
+  @media screen and (max-width: 800px) {
+    margin: 8px;
+  }
+}
+
+.Sidebar {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  margin: 24px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  @media screen and (max-width: 800px) {
+    margin: 8px;
+  }
+
+}
+
+.Projects {
+ text-align: right;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-end;
+ flex: 1;
+}
+
+.projectItem {
+  margin-bottom: 18px;
+}
+
+.projectRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 6px;
+  @media screen and (max-width: 800px) {
+    flex-direction: column-reverse;
+  }
+}
+
+
+.projectInfo {
+  margin-right: 16px;
+  span {
+    transition: 4s ease-in-out all;
+    &:hover {
+      letter-spacing: 20px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    margin-right: 0;
+  }
+}
+
+.technologies {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  .tech {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    span {
+      transition: 0.4s ease-in-out all;
+      display: block;
+    }
+    &:hover {
+      span {
+        text-shadow: 0 0 2px #000;
+        transform: skewX(-10deg) translateY(-2px);
+      }
+      img {
+        transform: rotate(1080deg);
+      }
+    }
+
+    img {
+      transition: 10s linear transform;
+      width: 20px;
+      margin-right: 6px;
+      transform-origin: center center;
+      @media screen and (max-width: 800px) {
+        width: 12px;
+      }
+    }
+  }
+}
+
+.About {
+  flex: 1;
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+    width: 100%;
+
+    h2 {
+      text-align: right;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+    h3 {
+      text-align: right;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    p {
+      text-align: right;
+      line-height: 120%;
+      font-weight: 600;
+      margin-bottom: 8px;
+      max-width: 720px;
+      margin-left: auto;
+      transition: 2s linear all;
+      display: block;
+
+      &:hover {
+        transform: skewX(180deg) !important;
+      }
+    }
+  }
+}
+
+.Awards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.Award {
+  text-align: right;
+  margin-bottom: 48px;
+
+  h2 {
+    text-align: right;
+    font-size: 32px;
+    padding: 0;
+    margin: 0;
+    line-height: 100%;
+    a {
+      padding: 0;
+      margin: 0;
+      line-height: 100%;
+      text-decoration: none;
+      color: map.get($light-theme, "secondary");
+      transition: 0.39s ease-in-out all;
+      transform-origin: bottom center;
+      &:hover {
+        color: map.get($light-theme, "primary");
+        transform: scale(1.15);
+        text-shadow: 2px 2px 1px map-get($light-theme, "fifth")
+      }
+    }
+  }
+  h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+  }
+  .awardTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-bottom: 18px;
+  }
+  .awardInfo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    margin-bottom: 18px;
+    h3, h4 {
+      padding: 0;
+      margin: 0;
+      line-height: 100%;
+    }
+    .awardDate {
+      font-weight: 600;
+      padding: 0;
+      margin: 0;
+      margin-left: 12px;
+      padding-left: 12px;
+      border-left: 2px solid map-get($light-theme, "fourth");
+      line-height: 100%;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: 400;
+    }
+    h4 {
+      font-size: 20px;
+    }
+  }
+}
+
+.divider {
+  width: 140px;
+  height: 3px;
+  background-color: map.get($light-theme, "secondary");
+  margin-left: auto;
+  margin-bottom: 12px;
+}
+
+.stackRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+  span {
+    margin-left: 16px;
+    font-weight: 600;
+  }
+}
+.react-p5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.letter {
+  transition: 1.2s ease-in-out all;
+  display: inline-block;
+  &:hover {
+    transform: scale(0.01) rotate(45deg);
+  }
+}
+
+@for $i from 1 through 11 {
+ .Poem p:nth-child(#{$i}) {
+   animation: flow 1.5s ease-in-out alternate infinite 0.2s*$i, chromatic 3s ease-in-out alternate infinite 0.5s*$i;
+  //  animation-delay: 0.2s*$i;
+ }
+}
+
+@keyframes flow {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes chromatic {
+  0% {
+    color: map-get($light-theme, "secondary");
+  }
+  100% {
+    color: map-get($dark-theme, "fourth");
+  }
+}
+
+.subtitle {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 26px;
+  &::before {
+   clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+  }
+  &::after {
+    clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+  }
+  &::before, &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s ease-out transform;
+  }
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // transform: translate(50%, 50%);
+    clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+  }
+
+  &:hover {
+    &::before {
+      transform: translate(-8%,10%)
+    }
+    &::after {
+      transform: translate(8%,-7%)
+    }
+  }
+}
+
+.Contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  ul li a {
+    display: flex;
+    align-items: center;
+    transition: 0.29s ease-in-out all;
+    img {
+      height: 15px;
+      margin-right: 12px;
+      transition: 0.29s ease-in-out all;
+    }
+    &:hover {
+      text-shadow: 3px 3px 4px #000;
+      img {
+        transform: rotate(45deg)
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&family=Zen+Kaku+Gothic+New:wght@300;400;600&display=swap');
+
+@import './_vars.scss';
+@import './_colors.scss';
+
+body, h1, h2, h3, h4, h5, h6, p, span {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  color: map.get($light-theme, "thirdy");
+  user-select: none;
+}
+
+h1, h2 {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h3 {
+  margin: 0;
+  line-height: 100%;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  line-height: 100%;
+}
+
+.Poem {
+  p {
+    font-family: 'Syne Mono', monospace;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    transition: 0.59s ease-in-out all;
+    transform-origin: bottom center;
+    &:hover {
+      text-shadow: 2px 2px 1px #000;
+      transform: scale(1.4);
+    }
+  }
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 8px;
+  font-size: 18px;
+  a, a:visited, a:focus {
+    text-decoration: none;
+    color: map.get($light-theme, "secondary");
+    font-weight: 600;
+    transition: $animation; 
+    display: inline-block;
+    transform-origin: left center;
+    &:hover {
+      color: map.get($light-theme, "primary");
+      transform: scale(1.3);
+      text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+    }
+  }
+}
+
+.Projects {
+  h3 {
+    font-size: 42px;
+  }
+  a, a:visited, a:focus {
+    text-decoration: none;
+    color: map.get($light-theme, "secondary");
+    font-weight: 600;
+    transition: $animation; 
+    display: inline-block;
+    transform-origin: left center;
+    &:hover {
+      color: map.get($light-theme, "fourth");
+      transform: translateY(-3px);
+      text-shadow: 0 0 20px #fff;
+    }
+  }
+
+  .projectInfo span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 540px) {
+    h3 {
+      font-size: 20px;
+    }
+    a, span {
+      font-size: 14px;
+    }
+    .tech span {
+      font-size: 14px;
+    }
+  }
+}
