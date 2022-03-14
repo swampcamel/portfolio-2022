@@ -6,7 +6,7 @@ let Poem = () => {
       initial={{opacity: 0}}
       animate={{opacity: 1}} 
       transition={{
-        opacity: { duration: 2 }
+        opacity: { duration: 0.4 }
       }}
       exit={{opacity: 0}}
       className="Poem">

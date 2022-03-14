@@ -16,7 +16,7 @@ let Award = (props) => {
           <h4>{v.issuer}</h4>
           <h3>{v.category}</h3>
         </div>
-        <span className="awardDate">{v.date} &nbsp;</span>
+        <span className="awardDate">{v.date}</span>
       </div> )}
     </div>
   )
