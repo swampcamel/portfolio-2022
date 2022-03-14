@@ -55,7 +55,7 @@ let Contact = () => {
       <motion.ul variants={ulVariant} initial="hidden" animate="visible" exit="close">
         {contactInfo.map((info, key)=> <motion.li variants={liVariant} key={key}>
           <a target="_blank" rel="nofollow noreferrer" href={info.link}>
-            <img src={process.env.PUBLIC_URL + '/img/exlink.svg'} />
+            <img src={process.env.PUBLIC_URL + '/img/exlink.svg'} alt="link"/>
             <span>{info.text}</span>
           </a>
         </motion.li>)}

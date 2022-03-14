@@ -6,7 +6,7 @@ let Award = (props) => {
     <div className="Award">
       <div className="awardProject">
         <div className="awardTitle">
-          <h2><a href={awardInfo.url} target="_blank" >{awardInfo.projectTitle}</a></h2>
+          <h2><a href={awardInfo.url} target="_blank" rel="noreferrer" >{awardInfo.projectTitle}</a></h2>
           <h5>{awardInfo.association}</h5>
         </div>
         <p>{awardInfo.description}</p>

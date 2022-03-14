@@ -24,17 +24,18 @@ let BorderBox = (props) => {
 
   useEffect(() => {
     if (stageCanvasRef) {
+      const newRef = stageCanvasRef.current
       window.addEventListener("resize", () => {
         setDimensions({
-          height: stageCanvasRef.current.getBoundingClientRect().height,
-          width: stageCanvasRef.current.getBoundingClientRect().width
+          height: newRef.getBoundingClientRect().height,
+          width: newRef.getBoundingClientRect().width
         })
       })
 
       return () => window.addEventListener("resize", () => {
         setDimensions({
-          height: stageCanvasRef.current.getBoundingClientRect().height,
-          width: stageCanvasRef.current.getBoundingClientRect().width
+          height: newRef.getBoundingClientRect().height,
+          width: newRef.getBoundingClientRect().width
         })
       })
     }
@@ -42,7 +43,6 @@ let BorderBox = (props) => {
 
   useEffect(() => {
     if (stageCanvasRef.current) {
-      console.log(dimensions)
       setDimensions({
         height: stageCanvasRef.current.getBoundingClientRect().height,
         width: stageCanvasRef.current.getBoundingClientRect().width

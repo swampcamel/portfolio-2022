@@ -43,7 +43,7 @@ let Projects = () => {
             <div className="projectInfo">
               <span>{project.date} / {project.type}</span>
             </div>
-            <h3><a href={project.url} target="_blank" rel="nofollow">{project.name}</a></h3>
+            <h3><a href={project.url} target="_blank" rel="nofollow noreferrer">{project.name}</a></h3>
           </div>
           <div className="technologies">
             {project.technologies.map( (tech, key) => <motion.div 
@@ -54,7 +54,7 @@ let Projects = () => {
               transition={{delay: 1.25, type: "spring", stiffness: 300}}
               className="tech" 
               key={`tech${key}`}>
-                <img src={process.env.PUBLIC_URL + `/img/${tech === "WordPress" ? "wp-ico.png" : tech === "React" ? "react-ico.png" : tech === "GraphQL" ? "gql-ico.png" : tech === "SharpSpring" ? "ss-ico.png" : tech === "NPL AI" ? "ai-ico.png" : tech === "Shopify" ? "shopify-ico.png" : tech === "Etsy" ? "etsy-ico.png" : "gtapi-ico.png"   }`} />
+                <img alt="tech icon" src={process.env.PUBLIC_URL + `/img/${tech === "WordPress" ? "wp-ico.png" : tech === "React" ? "react-ico.png" : tech === "GraphQL" ? "gql-ico.png" : tech === "SharpSpring" ? "ss-ico.png" : tech === "NPL AI" ? "ai-ico.png" : tech === "Shopify" ? "shopify-ico.png" : tech === "Etsy" ? "etsy-ico.png" : "gtapi-ico.png"   }`} />
                 <span>{tech}</span>
             </motion.div>)}
           </div>

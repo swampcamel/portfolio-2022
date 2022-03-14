@@ -3,19 +3,14 @@ import { useEffect, useState } from "react"
 
 
 let Canvas = (props) => {
-	const [p5, setP5] = useState()
+	const [p5, setP5] = useState(null)
 
-	useEffect(() => {
-		window.addEventListener("resize", windowResized)
-		return () => window.removeEventListener("resize", windowResized)
-	}, [])
 	useEffect(() => {
 		// console.log("hit")
 		if(p5) {
 			p5.resizeCanvas(props.parentWidth-4, props.parentHeight-4)
-
 		}
-	}, [props])
+	}, [props, p5])
 
 	const setup = (p5, canvasParentRef) => {
 		// use parent to render the canvas in this ref
@@ -37,12 +32,6 @@ let Canvas = (props) => {
 			}
 		}
 	};
-
-	const windowResized = () => {
-		if (p5) {
-			p5.resizeCanvas(props.parentWidth-4, props.parentHeight-4)	
-		}
-	}
 
 	return <Sketch setup={setup} draw={draw} />;
 };
