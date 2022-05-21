@@ -12,10 +12,6 @@ const contactInfo = [
   {
     text: "github",
     link: "https://github.com/swampcamel"
-  },
-  {
-    text: "email",
-    link: "mailto:dbmace@protonmail.com"
   }
 ]
 
